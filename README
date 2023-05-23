@@ -1,0 +1,26 @@
+Find stone pair
+
+Question A
+石头的重量通常为正数，且应为浮点数。对于非正数石头应进行过滤。函数输入一组石头的重量，以及组成对的两块石头的重量差，输出满足重量差的两块石头的序号。
+
+函数: std::pair<size_t, size_t> find_stone_pair(const std::vector<double>& stones_weights, double difference);
+eg1
+输入：[1, 2, 3] 1
+输出：<0, 1>
+eg2
+输入：[1.5, 2, 4] 0.5
+输出: <0, 1>
+eg3
+输入：[-1, 1, 2, 4] 3
+输出: <1, 3>
+
+Question B
+这里实现方式遍历一遍所有石头的重量，时间复杂度o(n)，采用unorder_map存储遍历过的石头，空间复杂度是o(n)，从unorder_map中查找时间复杂度是o(1)。
+整体上时间复杂度为o(n)，空间复杂度为o(n)
+
+测试方式：使用googletest进行单元测试
+
+Question C
+函数: std::vector<std::pair<size_t, size_t>> find_all_stone_pairs(const std::vector<double>& stones_weights, double difference);
+函数输入一组石头的重量，以及组成对的两块石头的重量差，输出所有满足重量差的两块石头的序号对。
+测试方式：使用googletest进行单元测试

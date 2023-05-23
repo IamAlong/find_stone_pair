@@ -48,29 +48,6 @@ std::pair<size_t, size_t> find_stone_pair(const std::vector<double>& stones_weig
 }
 
 /**
- * functione: judge a stone pair had been found, or not
- * input:
- * ***@stone_pairs: record all stone pairs whose had been found
- * ***@first_stone_weight: a stone weight
- * ***@second_stone_weight: another stone weight
- * output:
- * ***if had found return true, else return false
-*/
-bool is_stone_pair_has_found(std::unordered_map<size_t, size_t>& stone_pairs,
-                            size_t first_stone_idx,
-                            size_t second_stone_idx) {
-    if (stone_pairs.find(first_stone_idx) != stone_pairs.end()
-        && stone_pairs[first_stone_idx] == second_stone_idx) {
-        return true;
-    }
-    if (stone_pairs.find(second_stone_idx) != stone_pairs.end()
-        && stone_pairs[second_stone_idx] == first_stone_idx) {
-        return true;
-    }
-    return false;
-}
-
-/**
  * function: find all stone pairs whose weight difference is D
  * input: 
  * ***@stones_weights: array of stone's weight, weight should > 0, if stone weight <= 0 while be filtered
