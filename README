@@ -24,3 +24,10 @@ Question C
 函数: std::vector<std::pair<size_t, size_t>> find_all_stone_pairs(const std::vector<double>& stones_weights, double difference);
 函数输入一组石头的重量，以及组成对的两块石头的重量差，输出所有满足重量差的两块石头的序号对。
 测试方式：使用googletest进行单元测试
+
+## 使用方法
+mkdir build
+cd build
+cmake ..
+make
+./test_find_stone_pair
